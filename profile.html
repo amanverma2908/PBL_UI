@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="profile.html">My Profile</a>
+            <a href="trips.html">My Trips</a>
+            <a href="login.html">Logout</a>
+        </nav>
+        <div class="welcome-message">
+            <p>Welcome <span id="passengerName">Passenger</span> !!!</p>
+        </div>
+    </header>
+    <main>
+        <h1>My Profile</h1>
+        <form id="profileForm">
+            <!-- Profile Information Fields (These will be filled dynamically) -->
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" disabled>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" disabled>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" disabled>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" disabled>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" disabled></textarea>
+
+            <label for="contactNumber">Contact Number:</label>
+            <input type="text" id="contactNumber" name="contactNumber" disabled>
+
+            <button type="button" id="editBtn">Edit</button>
+            <button type="button" id="saveBtn" disabled>Save</button>
+        </form>
+    </main>
+    <script src="profile.js"></script>
+</body>
+</html>

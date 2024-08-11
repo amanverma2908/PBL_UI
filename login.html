@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="reg.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <div id="error-message" class="error-message"></div>
+        <form id="loginForm">
+            <div class="input-group">
+                <i class='bx bxs-user'></i>
+                <input type="text" id="userId" name="userId" placeholder="User ID">
+            </div>
+            <div class="input-group">
+                <i class='bx bxs-lock'></i>
+                <input type="password" id="password" name="password" maxlength="30" placeholder="Password">
+            </div>
+            <button type="button" id="loginBtn">Login</button>
+        </form>
+        <p>New User? <a href="register.html">Register Yourself</a></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const staticUsers = {
+                "12345": "password1",
+                "23456": "password2",
+                "34567": "password3"
+            };
+
+            document.getElementById('loginBtn').addEventListener('click', () => {
+                const userId = document.getElementById('userId').value;
+                const password = document.getElementById('password').value;
+                const errorMessageDiv = document.getElementById('error-message');
+
+                errorMessageDiv.innerHTML = ''; // Clear previous error messages
+
+                if (userId.length === 0 || password.length === 0) {
+                    errorMessageDiv.innerHTML = 'User ID and Password are both mandatory.';
+                    return;
+                }
+
+                if (!/^\d{1,5}$/.test(userId)) {
+                    errorMessageDiv.innerHTML = 'User ID must be numeric and not more than 5 digits.';
+                    return;
+                }
+
+                if (password.length < 6 || password.length > 30) {
+                    errorMessageDiv.innerHTML = 'Password must be between 6 and 30 characters.';
+                    return;
+                }
+
+                if (!(userId in staticUsers)) {
+                    errorMessageDiv.innerHTML = 'ID not valid.';
+                    return;
+                }
+
+                if (staticUsers[userId] !== password) {
+                    errorMessageDiv.innerHTML = 'Password not valid.';
+                    return;
+                }
+
+
+                // Redirect to home page
+                window.location.href = 'home.html'; // Replace with your actual home page
+            });
+        });
+    </script>
+</body>
+</html>

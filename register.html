@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="reg.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Register</h2>
+        <div id="error-message" class="error-message"></div>
+        <form id="registerForm">
+            <div class="input-group">
+                <i class='bx bxs-user'></i>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" maxlength="50">
+            </div>
+            <div class="input-group">
+                <i class='bx bxs-user'></i>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" maxlength="50">
+            </div>
+            <div class="input-group">
+                <i class='bx bxs-calendar'></i>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div class="input-group">
+                <i class='bx bxs-envelope'></i>
+                <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="input-group">
+                <i class='bx bxs-home'></i>
+                <textarea id="address" name="address" placeholder="Address" maxlength="100"></textarea>
+            </div>
+            <div class="input-group">
+                <i class='bx bxs-phone'></i>
+                <input type="text" id="contactNumber" name="contactNumber" placeholder="Contact Number" maxlength="10">
+            </div>
+            <button type="button" id="registerBtn">Register</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('registerBtn').addEventListener('click', () => {
+                const firstName = document.getElementById('firstName').value;
+                const lastName = document.getElementById('lastName').value;
+                const dob = document.getElementById('dob').value;
+                const email = document.getElementById('email').value;
+                const address = document.getElementById('address').value;
+                const contactNumber = document.getElementById('contactNumber').value;
+                const errorMessageDiv = document.getElementById('error-message');
+
+                errorMessageDiv.innerHTML = ''; // Clear previous error messages
+
+                if (!firstName || !lastName || !dob || !email || !address || !contactNumber) {
+                    errorMessageDiv.innerHTML = 'All fields are mandatory.';
+                    return;
+                }
+
+                if (firstName.length > 50 || lastName.length > 50 || address.length > 100 || contactNumber.length > 10) {
+                    errorMessageDiv.innerHTML = 'Please ensure the length of the inputs does not exceed the limits.';
+                    return;
+                }
+
+                if (!/^\d{10}$/.test(contactNumber)) {
+                    errorMessageDiv.innerHTML = 'Contact Number must be exactly 10 digits.';
+                    return;
+                }
+
+                const passengerId = Math.floor(100000 + Math.random() * 900000);
+                const password = firstName.substring(0, 4) + '@123';
+
+                // Assuming registration is successful
+                // Redirect to acknowledgment page
+                window.location.href = `acknowledgment.html?passengerId=${passengerId}&password=${password}`;
+            });
+        });
+    </script>
+</body>
+</html>

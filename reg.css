@@ -1,0 +1,221 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: teal;
+    color: white;
+}
+
+/* Login container */
+.login-container {
+    width: 420px;
+    padding: 40px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(30px);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+.login-container .error-message {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: red;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: white;
+}
+
+/* Input styles */
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.input-group i {
+    color: white;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background: transparent;
+    color: white;
+    outline: none;
+}
+
+.login-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button styles */
+.login-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 70px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+    background-color: black;
+}
+
+.login-container p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+.login-container a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: teal;
+    color: white;
+}
+
+/* Login container */
+.login-container {
+    width: 420px;
+    padding: 40px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(30px);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+.login-container .error-message {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: red;
+}
+
+.login-container .success-message {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: green;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: white;
+}
+
+/* Input styles */
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.input-group i {
+    color: white;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.login-container input,
+.login-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background: transparent;
+    color: white;
+    outline: none;
+}
+
+.login-container input::placeholder,
+.login-container textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button styles */
+.login-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 70px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+}
+
+.login-container button:hover {
+    background-color: black;
+}
+
+.login-container p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+.login-container a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+
+
